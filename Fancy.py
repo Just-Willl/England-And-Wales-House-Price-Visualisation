@@ -146,7 +146,7 @@ for col in dec_cols:
         tick.set_fontsize(9)
 
     # Credits
-    fig.text(0.06, 0.04, "Data: ONS • Viz: Will", ha="left", fontsize=9, color="#6e6e6e")
+    fig.text(0.06, 0.04, "Data: ONS • Vis: Will", ha="left", fontsize=9, color="#6e6e6e")
 
     # Save frame
     frame_path = os.path.join(out_dir, f"{col.replace(' ', '_')}.png")
@@ -159,3 +159,4 @@ for col in dec_cols:
 images = [imageio.imread(os.path.join(out_dir, f"{c.replace(' ', '_')}.png")) for c in dec_cols]
 imageio.mimsave(gif_path, images, fps=2)
 print(f"GIF saved to {gif_path}")
+
